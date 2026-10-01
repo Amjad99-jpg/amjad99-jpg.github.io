@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Amjad Rashid Alhousni">
+<meta name="description" content="Project by Amjad Alhousni: which Instagram and Facebook content makes millennials buy sustainable fashion. 100 consumers surveyed and tested in SPSS.">
+<title>Proof Sells: Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #FBFAF7; --panel: #FFFFFF; --ink: #1E1B33; --muted: #5E5A73; --rule: #E6E2EE;
+    --violet: #5B3DF5; --violet-ink: #3F25D6; --violet-soft: #EEEAFF;
+    --lime: #DDF46B; --lime-deep: #C9E84A; --coral: #FF7A59; --coral-soft: #FFE9E2; --mint-soft: #E1F7EE; --peach-soft: #FFF1E3;
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "DM Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: inherit; }
+  img, svg { display: block; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
+  .narrow { max-width: 880px; }
+  h1, h2, h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; margin: 0; line-height: 1; text-transform: uppercase; letter-spacing: -0.005em; text-wrap: balance; overflow-wrap: break-word; }
+  p { margin: 0; }
+  .hl { color: var(--violet); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--violet); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border: 2px solid transparent; transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.primary { background: var(--violet); color: #fff; }
+  .btn.lime { background: var(--lime); color: var(--ink); }
+  .btn.outline { border-color: var(--ink); color: var(--ink); background: transparent; }
+  a:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; border-radius: 8px; }
+
+  nav { position: sticky; top: 0; z-index: 20; background: rgba(251,250,247,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  nav .name { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 19px; text-decoration: none; letter-spacing: 0.01em; }
+  nav .name b { color: var(--violet); }
+  nav .links { display: flex; gap: 26px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+  nav .links a { text-decoration: none; color: var(--muted); }
+  nav .links a:hover, nav .links a[aria-current] { color: var(--violet); }
+  nav .btn { padding: 9px 18px; font-size: 12.5px; }
+
+  .hero { position: relative; overflow: hidden; background:
+      radial-gradient(520px 360px at 88% 18%, rgba(91,61,245,0.20), transparent 70%),
+      radial-gradient(460px 320px at 8% 92%, rgba(221,244,107,0.55), transparent 70%),
+      radial-gradient(420px 300px at 62% 105%, rgba(255,122,89,0.18), transparent 70%),
+      var(--bg); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 5px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--rule); color: var(--ink); }
+
+  .band { background: var(--lime); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .stat { background: var(--panel); border-radius: 16px; padding: 20px 20px 18px; display: grid; gap: 6px; align-content: start; box-shadow: 0 1px 0 rgba(30,27,51,0.06); }
+  .stat b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: clamp(30px, 3.6vw, 42px); line-height: 1; }
+  .stat span { font-size: 14px; color: var(--muted); line-height: 1.4; }
+
+  section.block { padding-block: 84px; }
+  .head { display: grid; gap: 14px; margin-bottom: 32px; max-width: 760px; }
+  .head h2 { font-size: clamp(32px, 5vw, 52px); }
+  .head p { font-size: 18px; color: var(--muted); max-width: 62ch; }
+
+  .contact { background: linear-gradient(120deg, var(--violet-soft), var(--mint-soft) 55%, var(--peach-soft)); }
+  .contact .wrap { padding-block: 84px; display: grid; gap: 22px; justify-items: start; }
+  .contact h2 { font-size: clamp(44px, 8vw, 88px); }
+  .contact p { font-size: 18px; color: var(--muted); max-width: 50ch; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  footer { background: var(--ink); color: #CFCBE0; font-size: 13px; }
+  footer .wrap { padding-block: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+  @media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    nav .links { display: none; }
+    section.block { padding-block: 60px; }
+    .stat { padding: 16px; }
+  }
+  .cs-hero { padding-block: 88px 64px; display: grid; gap: 24px; justify-items: start; }
+  .cs-hero h1 { font-size: clamp(44px, 8.6vw, 104px); }
+  .lede { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 60ch; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px 34px; margin: 6px 0 0; }
+  .meta div { display: grid; gap: 2px; }
+  .meta dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .meta dd { margin: 0; font-weight: 600; }
+  .band-in { padding-block: 34px; }
+  .stat b small { font-size: 0.5em; color: var(--muted); font-weight: 700; }
+  .tint { background: var(--panel); border-radius: 28px; padding-inline: clamp(20px, 4vw, 48px); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pcard { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 24px; display: grid; gap: 6px; align-content: start; }
+  .pcard b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 30px; line-height: 1.05; }
+  .pcard .k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); font-weight: 500; margin-bottom: 6px; }
+  .pcard p { color: var(--muted); font-size: 15.5px; }
+
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .side { border-radius: 20px; padding: 26px; display: grid; gap: 16px; align-content: start; }
+  .side.before { background: var(--bg); border: 1px solid var(--rule); }
+  .side.after { background: var(--violet); color: #fff; box-shadow: 0 18px 40px -18px rgba(91,61,245,0.55); }
+  .side-h { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .ico { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-size: 14px; font-weight: 700; }
+  .ico.x { background: var(--rule); color: var(--muted); }
+  .ico.ok { background: var(--lime); color: var(--ink); }
+  .side ol { margin: 0; padding: 0; list-style: none; counter-reset: i; display: grid; gap: 12px; }
+  .side li { counter-increment: i; display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.45; }
+  .side li::before { content: counter(i); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; font-family: var(--mono); font-size: 12px; background: var(--rule); color: var(--muted); }
+  .side.after li::before { background: rgba(255,255,255,0.18); color: #fff; }
+  .side-foot { font-size: 14.5px; padding: 12px 16px; border-radius: 12px; background: var(--rule); color: var(--muted); }
+  .side-foot.lime { background: var(--lime); color: var(--ink); font-family: var(--display); font-stretch: 108%; font-weight: 800; text-transform: uppercase; font-size: 16px; letter-spacing: 0.02em; }
+
+  .move, .rec { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+  .move .n, .rec .n { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 44px; line-height: 1; color: var(--violet); }
+  .move h3, .rec h3 { font-size: 22px; }
+  .move p, .rec p { color: var(--muted); font-size: 15.5px; }
+  .rec { border-top: 5px solid var(--violet); }
+  .rec.test { border-top-color: var(--coral); }
+  .rec.test .n { color: var(--coral); }
+
+  .results { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; align-items: stretch; }
+  .chart { margin: 0; background: var(--bg); border: 1px solid var(--rule); border-radius: 20px; padding: 24px; display: grid; gap: 22px; align-content: start; }
+  .chart figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .row { display: grid; gap: 10px; }
+  .rl b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 24px; text-transform: uppercase; display: block; line-height: 1.1; }
+  .rl span { font-size: 14px; color: var(--muted); }
+  .track { display: flex; align-items: center; gap: 10px; }
+  .track i { display: block; height: 34px; border-radius: 10px; }
+  .track i.on { background: linear-gradient(90deg, var(--violet), #8C74FF); }
+  .track i.off { background: var(--coral); opacity: 0.8; }
+  .track em { font-style: normal; font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 26px; }
+  .tag { justify-self: start; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; }
+  .tag.yes { background: var(--lime); color: var(--ink); }
+  .tag.no { background: var(--coral-soft); color: #B4401F; }
+  .fine { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .facts { display: grid; gap: 12px; }
+  .fact { background: var(--violet-soft); border-radius: 18px; padding: 20px 22px; display: grid; gap: 4px; }
+  .fact:nth-child(2) { background: var(--mint-soft); }
+  .fact:nth-child(3) { background: var(--peach-soft); }
+  .fact b { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 40px; line-height: 1; }
+  .fact p { font-size: 14.5px; color: var(--muted); }
+  .quote { margin: 26px 0 0; padding: 28px 30px; border-radius: 20px; background: var(--ink); color: #fff; display: grid; gap: 10px; }
+  .quote p { font-family: var(--display); font-stretch: 106%; font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 1.2; }
+  .quote cite { font-style: normal; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); }
+
+  .limits-wrap { padding-bottom: 60px; display: grid; gap: 26px; }
+  .limits { display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: 14px; align-items: stretch; }
+  .lh { display: grid; gap: 12px; align-content: center; }
+  .lh h2 { font-size: clamp(28px, 3.6vw, 38px); }
+  .lim { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 20px; display: grid; gap: 6px; align-content: start; }
+  .lim b { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 34px; line-height: 1; color: var(--coral); }
+  .lim p { font-size: 14.5px; color: var(--muted); }
+  .skills { display: grid; gap: 12px; }
+
+  .next { padding-bottom: 84px; }
+  .next-card { display: grid; gap: 14px; padding: 30px; border-radius: 24px; background: var(--lime); text-decoration: none; }
+  .next-card .eyebrow { color: var(--ink); }
+  .next-card .eyebrow::before { background: var(--ink); }
+  .nc { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .nc h2 { font-size: clamp(26px, 4vw, 44px); }
+  .go { flex: none; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--lime); font-size: 26px; transition: transform .15s ease; }
+  .next-card:hover .go { transform: translateX(4px); }
+
+  @media (max-width: 900px) {
+    .grid3, .vs, .results { grid-template-columns: 1fr; }
+    .limits { grid-template-columns: 1fr 1fr; }
+    .lh { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) {
+    .cs-hero { padding-block: 56px 44px; }
+    .limits { grid-template-columns: 1fr; }
+    .tint { border-radius: 0; }
+    .go { width: 48px; height: 48px; }
+  }
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="name" href="https://amjad99-jpg.github.io/">Amjad <b>A.</b></a>
+    <div class="links"><a href="https://amjad99-jpg.github.io/">Home</a><a href="https://amjad99-jpg.github.io/#work" aria-current="page">Projects</a></div>
+    <a class="btn primary" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap cs-hero">
+    <span class="eyebrow">Project 03 · Data analysis</span>
+    <h1>Proof sells.<br><span class="hl">Promotion doesn't.</span></h1>
+    <p class="lede">Which Instagram and Facebook content makes millennials buy sustainable fashion? I built a survey, collected 100 responses and tested it in SPSS, using Zara as the case.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Researcher and analyst</dd></div>
+      <div><dt>Tools</dt><dd>Google Forms, SPSS</dd></div>
+      <div><dt>Context</dt><dd>MSc dissertation, LJMU</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap band-in">
+    <div class="stats">
+      <div class="stat"><b>100</b><span>consumers surveyed</span></div>
+      <div class="stat"><b>0.30 <small>vs</small> 0.06</b><span>effect of proof vs promotion on buying</span></div>
+      <div class="stat"><b>58%</b><span>strongly agreed that reviews and ratings show how sustainable a product is</span></div>
+      <div class="stat"><b>p = 0.008</b><span>proof effect, statistically significant</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="block wrap" aria-labelledby="s1">
+    <div class="head">
+      <span class="eyebrow">01 · The problem</span>
+      <h2 id="s1">Brands post a lot. Few know <span class="hl">what makes people buy</span>.</h2>
+      <p>Shoppers say they want sustainable fashion, and brands promote green ranges hard on social media. The question was which of those posts actually changes a purchase.</p>
+    </div>
+    <div class="grid3">
+      <article class="pcard"><b>Which post?</b><span class="k">No clear answer</span><p>Influencers, offers, personalised ads, reviews, campaigns. Brands run all of them without knowing which one moves a millennial buyer.</p></article>
+      <article class="pcard"><b>Low trust</b><span class="k">Greenwashing</span><p>Vague green claims make shoppers doubt the message, so a post can be seen and still ignored.</p></article>
+      <article class="pcard"><b>Not tested</b><span class="k">Gap in research</span><p>Earlier studies looked at sustainable fashion in general, not at what Instagram and Facebook content does to a purchase.</p></article>
+    </div>
+  </section>
+
+  <section class="block wrap tint" aria-labelledby="s2">
+    <div class="head">
+      <span class="eyebrow">02 · Assumption vs evidence</span>
+      <h2 id="s2">What brands assume. <span class="hl">What the data says.</span></h2>
+    </div>
+    <div class="vs">
+      <article class="side before">
+        <div class="side-h"><span class="ico x" aria-hidden="true">✕</span>The usual assumption</div>
+        <ol>
+          <li>Influencers create the desire</li>
+          <li>Personalised ads grab attention</li>
+          <li>Offers and discounts close the sale</li>
+        </ol>
+        <p class="side-foot">Spend more on promotion, sell more.</p>
+      </article>
+      <article class="side after">
+        <div class="side-h"><span class="ico ok" aria-hidden="true">✓</span>What 100 consumers showed</div>
+        <ol>
+          <li>They check reviews, ratings and comments before trusting a green claim</li>
+          <li>Content they could check had a significant effect on buying (p = 0.008)</li>
+          <li>Promotion had no significant effect (p = 0.605), even though personalised ads were the highest rated statement in the survey (4.11 out of 5)</li>
+        </ol>
+        <p class="side-foot lime">People buy what they can check.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="s3">
+    <div class="head">
+      <span class="eyebrow">03 · Execution</span>
+      <h2 id="s3">How I did it, in <span class="hl">three moves</span></h2>
+    </div>
+    <div class="grid3">
+      <article class="move"><span class="n">01</span><h3>Built the survey</h3><p>15 statements in three groups: buying decisions, information shared on social media, and promotion. Piloted with 10 people, then added more advertising questions.</p></article>
+      <article class="move"><span class="n">02</span><h3>Collected the data</h3><p>100 millennial fashion buyers reached through LinkedIn and Facebook. Signed consent, answers anonymised.</p></article>
+      <article class="move"><span class="n">03</span><h3>Tested it in SPSS</h3><p>Checked the scales were reliable (Cronbach's alpha 0.697), then ran a multiple regression and cross tabulations by gender.</p></article>
+    </div>
+  </section>
+
+  <section class="block wrap tint" aria-labelledby="s4">
+    <div class="head">
+      <span class="eyebrow">04 · Results</span>
+      <h2 id="s4">One kind of content <span class="hl">moved buying</span></h2>
+    </div>
+    <div class="results">
+      <figure class="chart" role="img" aria-label="Standardised regression coefficients: content people can check 0.30, significant, p = 0.008. Promotion 0.06, not significant, p = 0.605.">
+        <figcaption>Effect on buying decisions (standardised beta)</figcaption>
+        <div class="row"><div class="rl"><b>Proof</b><span>Reviews, ratings, comments, product and campaign information</span></div><div class="track"><i class="on" style="width:87%"></i><em>0.30</em></div><span class="tag yes">Significant · p = 0.008</span></div>
+        <div class="row"><div class="rl"><b>Promotion</b><span>Personalised ads, influencers, offers, interactive ads</span></div><div class="track"><i class="off" style="width:17%"></i><em>0.06</em></div><span class="tag no">Not significant · p = 0.605</span></div>
+        <p class="fine">Multiple regression, model significant overall: F(2, 97) = 6.28, p = 0.003</p>
+      </figure>
+      <div class="facts">
+        <div class="fact"><b>58%</b><p>strongly agreed that ratings and feedback on Instagram and Facebook show how sustainable a product is</p></div>
+        <div class="fact"><b>54%</b><p>strongly agreed they prefer brands that do less harm to the environment</p></div>
+        <div class="fact"><b>50%</b><p>strongly agreed they check a brand's green claim through other people's comments</p></div>
+      </div>
+    </div>
+    <blockquote class="quote"><p>"Personalised ads were the highest rated item in the survey. Promotion as a whole still had no significant effect on buying."</p><cite>The finding that surprised me most</cite></blockquote>
+  </section>
+
+  <section class="block wrap" aria-labelledby="s5">
+    <div class="head">
+      <span class="eyebrow">05 · Recommendation</span>
+      <h2 id="s5">What I'd tell <span class="hl">a brand</span></h2>
+    </div>
+    <div class="grid3">
+      <article class="rec"><span class="n">01</span><h3>Show the supply chain</h3><p>Put sourcing, materials and certifications on the posts customers already see.</p></article>
+      <article class="rec"><span class="n">02</span><h3>Keep reviews open</h3><p>Leave ratings and comments visible and reply to questions. That is the proof people look for.</p></article>
+      <article class="rec test"><span class="n">03</span><h3>Test before scaling</h3><p>Trial any extra influencer or offer spend against a control group before rolling it out.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap limits-wrap" aria-labelledby="s6">
+    <div class="limits">
+      <div class="lh"><span class="eyebrow">06 · Limits</span><h2 id="s6">What I'd do next</h2></div>
+      <div class="lim"><b>11.5%</b><p>of the variation in buying was explained. Next time I would add price and quality.</p></div>
+      <div class="lim"><b>64 / 31</b><p>respondents in the UK and the Middle East; 5 gave no clear location. A larger UK sample would make it stronger.</p></div>
+      <div class="lim"><b>Why?</b><p>A survey shows what people do, not why. Interviews with shoppers and marketers come next.</p></div>
+    </div>
+    <div class="skills"><span class="eyebrow">BA and data skills used</span><div class="chips"><span>Data analysis in SPSS</span><span>Multiple regression</span><span>Hypothesis testing</span><span>Descriptive statistics</span><span>Data coding and cleaning</span><span>Reliability testing</span><span>Survey design</span><span>Insight to recommendation</span></div></div>
+  </section>
+
+  <section class="wrap next" aria-labelledby="nx">
+    <a class="next-card" href="https://amjad99-jpg.github.io/on-the-go-project.html">
+      <span class="eyebrow">Next project · Stakeholder analysis</span>
+      <span class="nc"><h2 id="nx">£200k to raise. 150+ doors to knock on.</h2><span class="go" aria-hidden="true">→</span></span>
+    </a>
+  </section>
+</main>
+
+<section class="contact" id="contact" aria-labelledby="ct">
+  <div class="wrap">
+    <h2 id="ct">Let's <span class="hl">talk.</span></h2>
+    <p>Open to business analyst and operations analyst roles. Email or LinkedIn is the quickest way to reach me.</p>
+    <div class="ctas">
+      <a class="btn primary" style="text-transform:none" href="mailto:alhosniamjaad99@gmail.com">alhosniamjaad99@gmail.com</a>
+      <a class="btn outline" href="https://www.linkedin.com/in/amjad-a-b62b14429" target="_blank" rel="noopener">LinkedIn →</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>MSc dissertation supervised by Professor Tim Nichol, Liverpool John Moores University. Independent research, not endorsed by Zara.</span><span>© 2026 Amjad Rashid Alhousni</span></div></footer>
+
+</body>
+</html>

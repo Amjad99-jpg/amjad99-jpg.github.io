@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Amjad Rashid Alhousni">
+<meta name="description" content="Project by Amjad Alhousni: stakeholder and funding research for On the Go, a youth programme in Liverpool. 150+ organisations mapped, 12 funders profiled against a £200k target.">
+<title>£200k to Raise: Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #FBFAF7; --panel: #FFFFFF; --ink: #1E1B33; --muted: #5E5A73; --rule: #E6E2EE;
+    --violet: #5B3DF5; --violet-ink: #3F25D6; --violet-soft: #EEEAFF;
+    --lime: #DDF46B; --lime-deep: #C9E84A; --coral: #FF7A59; --coral-soft: #FFE9E2; --mint-soft: #E1F7EE; --peach-soft: #FFF1E3;
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "DM Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: inherit; }
+  img, svg { display: block; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
+  .narrow { max-width: 880px; }
+  h1, h2, h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; margin: 0; line-height: 1; text-transform: uppercase; letter-spacing: -0.005em; text-wrap: balance; overflow-wrap: break-word; }
+  p { margin: 0; }
+  .hl { color: var(--violet); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--violet); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border: 2px solid transparent; transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.primary { background: var(--violet); color: #fff; }
+  .btn.lime { background: var(--lime); color: var(--ink); }
+  .btn.outline { border-color: var(--ink); color: var(--ink); background: transparent; }
+  a:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; border-radius: 8px; }
+
+  nav { position: sticky; top: 0; z-index: 20; background: rgba(251,250,247,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  nav .name { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 19px; text-decoration: none; letter-spacing: 0.01em; }
+  nav .name b { color: var(--violet); }
+  nav .links { display: flex; gap: 26px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+  nav .links a { text-decoration: none; color: var(--muted); }
+  nav .links a:hover, nav .links a[aria-current] { color: var(--violet); }
+  nav .btn { padding: 9px 18px; font-size: 12.5px; }
+
+  .hero { position: relative; overflow: hidden; background:
+      radial-gradient(520px 360px at 88% 18%, rgba(91,61,245,0.20), transparent 70%),
+      radial-gradient(460px 320px at 8% 92%, rgba(221,244,107,0.55), transparent 70%),
+      radial-gradient(420px 300px at 62% 105%, rgba(255,122,89,0.18), transparent 70%),
+      var(--bg); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 5px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--rule); color: var(--ink); }
+
+  .band { background: var(--lime); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .stat { background: var(--panel); border-radius: 16px; padding: 20px 20px 18px; display: grid; gap: 6px; align-content: start; box-shadow: 0 1px 0 rgba(30,27,51,0.06); }
+  .stat b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: clamp(30px, 3.6vw, 42px); line-height: 1; }
+  .stat span { font-size: 14px; color: var(--muted); line-height: 1.4; }
+
+  section.block { padding-block: 84px; }
+  .head { display: grid; gap: 14px; margin-bottom: 32px; max-width: 760px; }
+  .head h2 { font-size: clamp(32px, 5vw, 52px); }
+  .head p { font-size: 18px; color: var(--muted); max-width: 62ch; }
+
+  .contact { background: linear-gradient(120deg, var(--violet-soft), var(--mint-soft) 55%, var(--peach-soft)); }
+  .contact .wrap { padding-block: 84px; display: grid; gap: 22px; justify-items: start; }
+  .contact h2 { font-size: clamp(44px, 8vw, 88px); }
+  .contact p { font-size: 18px; color: var(--muted); max-width: 50ch; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  footer { background: var(--ink); color: #CFCBE0; font-size: 13px; }
+  footer .wrap { padding-block: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+  @media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    nav .links { display: none; }
+    section.block { padding-block: 60px; }
+    .stat { padding: 16px; }
+  }
+  .cs-hero { padding-block: 88px 64px; display: grid; gap: 24px; justify-items: start; }
+  .cs-hero h1 { font-size: clamp(44px, 8.6vw, 104px); }
+  .lede { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 60ch; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px 34px; margin: 6px 0 0; }
+  .meta div { display: grid; gap: 2px; }
+  .meta dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .meta dd { margin: 0; font-weight: 600; }
+  .band-in { padding-block: 34px; }
+  .stat b small { font-size: 0.5em; color: var(--muted); font-weight: 700; }
+  .tint { background: var(--panel); border-radius: 28px; padding-inline: clamp(20px, 4vw, 48px); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pcard { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 24px; display: grid; gap: 6px; align-content: start; }
+  .pcard b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 30px; line-height: 1.05; }
+  .pcard .k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); font-weight: 500; margin-bottom: 6px; }
+  .pcard p { color: var(--muted); font-size: 15.5px; }
+
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .side { border-radius: 20px; padding: 26px; display: grid; gap: 16px; align-content: start; }
+  .side.before { background: var(--bg); border: 1px solid var(--rule); }
+  .side.after { background: var(--violet); color: #fff; box-shadow: 0 18px 40px -18px rgba(91,61,245,0.55); }
+  .side-h { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .ico { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-size: 14px; font-weight: 700; }
+  .ico.x { background: var(--rule); color: var(--muted); }
+  .ico.ok { background: var(--lime); color: var(--ink); }
+  .side ol { margin: 0; padding: 0; list-style: none; counter-reset: i; display: grid; gap: 12px; }
+  .side li { counter-increment: i; display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.45; }
+  .side li::before { content: counter(i); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; font-family: var(--mono); font-size: 12px; background: var(--rule); color: var(--muted); }
+  .side.after li::before { background: rgba(255,255,255,0.18); color: #fff; }
+  .side-foot { font-size: 14.5px; padding: 12px 16px; border-radius: 12px; background: var(--rule); color: var(--muted); }
+  .side-foot.lime { background: var(--lime); color: var(--ink); font-family: var(--display); font-stretch: 108%; font-weight: 800; text-transform: uppercase; font-size: 16px; letter-spacing: 0.02em; }
+
+  .move, .rec { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+  .move .n, .rec .n { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 44px; line-height: 1; color: var(--violet); }
+  .move h3, .rec h3 { font-size: 22px; }
+  .move p, .rec p { color: var(--muted); font-size: 15.5px; }
+  .rec { border-top: 5px solid var(--violet); }
+  .rec.test { border-top-color: var(--coral); }
+  .rec.test .n { color: var(--coral); }
+
+  .results { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; align-items: stretch; }
+  .chart { margin: 0; background: var(--bg); border: 1px solid var(--rule); border-radius: 20px; padding: 24px; display: grid; gap: 22px; align-content: start; }
+  .chart figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .row { display: grid; gap: 10px; }
+  .rl b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 24px; text-transform: uppercase; display: block; line-height: 1.1; }
+  .rl span { font-size: 14px; color: var(--muted); }
+  .track { display: flex; align-items: center; gap: 10px; }
+  .track i { display: block; height: 34px; border-radius: 10px; }
+  .track i.on { background: linear-gradient(90deg, var(--violet), #8C74FF); }
+  .track i.off { background: var(--coral); opacity: 0.8; }
+  .track em { font-style: normal; font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 26px; }
+  .tag { justify-self: start; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; }
+  .tag.yes { background: var(--lime); color: var(--ink); }
+  .tag.no { background: var(--coral-soft); color: #B4401F; }
+  .fine { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .facts { display: grid; gap: 12px; }
+  .fact { background: var(--violet-soft); border-radius: 18px; padding: 20px 22px; display: grid; gap: 4px; }
+  .fact:nth-child(2) { background: var(--mint-soft); }
+  .fact:nth-child(3) { background: var(--peach-soft); }
+  .fact b { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 40px; line-height: 1; }
+  .fact p { font-size: 14.5px; color: var(--muted); }
+  .quote { margin: 26px 0 0; padding: 28px 30px; border-radius: 20px; background: var(--ink); color: #fff; display: grid; gap: 10px; }
+  .quote p { font-family: var(--display); font-stretch: 106%; font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 1.2; }
+  .quote cite { font-style: normal; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); }
+
+  .limits-wrap { padding-bottom: 60px; display: grid; gap: 26px; }
+  .limits { display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: 14px; align-items: stretch; }
+  .lh { display: grid; gap: 12px; align-content: center; }
+  .lh h2 { font-size: clamp(28px, 3.6vw, 38px); }
+  .lim { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 20px; display: grid; gap: 6px; align-content: start; }
+  .lim b { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 34px; line-height: 1; color: var(--coral); }
+  .lim p { font-size: 14.5px; color: var(--muted); }
+  .skills { display: grid; gap: 12px; }
+
+  .next { padding-bottom: 84px; }
+  .next-card { display: grid; gap: 14px; padding: 30px; border-radius: 24px; background: var(--lime); text-decoration: none; }
+  .next-card .eyebrow { color: var(--ink); }
+  .next-card .eyebrow::before { background: var(--ink); }
+  .nc { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .nc h2 { font-size: clamp(26px, 4vw, 44px); }
+  .go { flex: none; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--lime); font-size: 26px; transition: transform .15s ease; }
+  .next-card:hover .go { transform: translateX(4px); }
+
+  @media (max-width: 900px) {
+    .grid3, .vs, .results { grid-template-columns: 1fr; }
+    .limits { grid-template-columns: 1fr 1fr; }
+    .lh { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) {
+    .cs-hero { padding-block: 56px 44px; }
+    .limits { grid-template-columns: 1fr; }
+    .tint { border-radius: 0; }
+    .go { width: 48px; height: 48px; }
+  }
+  .meta { gap: 10px 30px; }
+  .pcard b { font-size: 34px; }
+  .funnels { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .funnel { background: var(--bg); border: 1px solid var(--rule); border-radius: 20px; padding: 24px; display: grid; gap: 14px; align-content: start; }
+  .f-h { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .f-h b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 26px; text-transform: uppercase; }
+  .rate { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; background: var(--coral-soft); color: #B4401F; }
+  .f-row { display: grid; grid-template-columns: 118px 1fr auto; gap: 12px; align-items: center; }
+  .f-l { font-size: 14px; color: var(--muted); }
+  .f-bar { display: block; height: 30px; border-radius: 10px; background: var(--violet-soft); overflow: hidden; }
+  .f-bar i { display: block; height: 100%; border-radius: 10px; }
+  .f-bar i.big { background: #B9ABFF; }
+  .f-bar i.small { background: var(--violet); }
+  .f-row b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: 26px; min-width: 76px; text-align: right; }
+  .funnel p { font-size: 14px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 12px; }
+
+  .map { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; align-items: start; }
+  .cats { margin: 0; background: var(--bg); border: 1px solid var(--rule); border-radius: 20px; padding: 22px; display: grid; gap: 9px; }
+  .cats figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .cat { display: grid; grid-template-columns: 190px 1fr 34px; gap: 12px; align-items: center; font-size: 14px; }
+  .ct { display: block; height: 14px; border-radius: 7px; background: var(--violet-soft); overflow: hidden; }
+  .ct i { display: block; height: 100%; border-radius: 7px; background: linear-gradient(90deg, var(--violet), #8C74FF); }
+  .cat b { font-family: var(--display); font-weight: 800; font-size: 16px; text-align: right; }
+  .score { display: grid; gap: 10px; background: var(--violet-soft); border-radius: 20px; padding: 22px; }
+  .crit { display: flex; flex-wrap: wrap; gap: 6px; }
+  .crit span { font-size: 13px; padding: 5px 11px; border-radius: 999px; background: var(--panel); border: 1px solid var(--rule); }
+  .arrow { text-align: center; font-weight: 800; color: var(--violet); font-size: 18px; }
+  .out { background: var(--panel); border-radius: 14px; padding: 14px 16px; display: grid; gap: 2px; }
+  .out b { font-family: var(--display); font-stretch: 106%; font-weight: 800; font-size: 18px; text-transform: uppercase; }
+  .out span { font-size: 14px; color: var(--muted); }
+  .out.lime { background: var(--lime); }
+  .out.lime span { color: var(--ink); }
+
+  @media (max-width: 900px) { .funnels, .map { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .f-row { grid-template-columns: 1fr auto; }
+    .f-row .f-bar { grid-column: 1 / -1; order: 3; }
+    .cat { grid-template-columns: 1fr 30px; row-gap: 4px; }
+    .cats { gap: 12px; }
+    .cat .ct { grid-column: 1 / -1; order: 3; }
+  }
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="name" href="https://amjad99-jpg.github.io/">Amjad <b>A.</b></a>
+    <div class="links"><a href="https://amjad99-jpg.github.io/">Home</a><a href="https://amjad99-jpg.github.io/#work" aria-current="page">Projects</a></div>
+    <a class="btn primary" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap cs-hero">
+    <span class="eyebrow">Project 04 · Stakeholder analysis</span>
+    <h1>£200k to raise.<br><span class="hl">150+ doors to knock on.</span></h1>
+    <p class="lede">Cycle of Life needed £200k in its first year to launch On the Go, a 12 week programme that helps disengaged young people in Liverpool build skills and run small businesses from food and drink bikes. As part of an MSc consultancy team, I built the research that showed who could fund it and who could partner with it.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Research Consultant</dd></div>
+      <div><dt>Client</dt><dd>Cycle of Life, non profit</dd></div>
+      <div><dt>When</dt><dd>Sep 2023 to Apr 2024</dd></div>
+      <div><dt>Team</dt><dd>MSc consultancy team</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap band-in">
+    <div class="stats">
+      <div class="stat"><b>150+</b><span>organisations mapped in a stakeholder tracker</span></div>
+      <div class="stat"><b>13</b><span>stakeholder categories, from funders to regulators</span></div>
+      <div class="stat"><b>12</b><span>local funders profiled against the £200k target</span></div>
+      <div class="stat"><b>£1.5m</b><span>five year income plan I contributed to, with grants cut from 50% to 10% of income</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="block wrap" aria-labelledby="s1">
+    <div class="head">
+      <span class="eyebrow">01 · The problem</span>
+      <h2 id="s1">A new programme with <span class="hl">no funding track record</span></h2>
+      <p>The client had a strong idea and a deadline. What it didn't have was a clear view of who to ask for money, support and space.</p>
+    </div>
+    <div class="grid3">
+      <article class="pcard"><b>£200k</b><span class="k">Needed in year one</span><p>At least £75k to £100k just to run the first 12 week programme, and £200k by September 2024.</p></article>
+      <article class="pcard"><b>Unknown</b><span class="k">Low recognition</span><p>No official website and no track record to show funders what the money would achieve.</p></article>
+      <article class="pcard"><b>Crowded</b><span class="k">Strong competition</span><p>Established programmes such as The Prince's Trust compete for the same funders and young people.</p></article>
+    </div>
+  </section>
+
+  <section class="block wrap tint" aria-labelledby="s2">
+    <div class="head">
+      <span class="eyebrow">02 · The funding maths</span>
+      <h2 id="s2">To raise £88k, <span class="hl">ask for £440k</span></h2>
+      <p>Most applications fail, so the plan had to be built on success rates, not on the target alone. Our team turned published success rates into how much the client needed to apply for.</p>
+    </div>
+    <div class="funnels">
+      <article class="funnel">
+        <div class="f-h"><b>Grants</b><span class="rate">20% success rate</span></div>
+        <div class="f-row"><span class="f-l">Apply for</span><span class="f-bar"><i class="big" style="width:100%"></i></span><b>£440k</b></div>
+        <div class="f-row"><span class="f-l">Expect to raise</span><span class="f-bar"><i class="small" style="width:20%"></i></span><b>£88k</b></div>
+        <p>About 43% of the £206k start up budget</p>
+      </article>
+      <article class="funnel">
+        <div class="f-h"><b>Crowdfunding</b><span class="rate">41% success rate</span></div>
+        <div class="f-row"><span class="f-l">Pitch for</span><span class="f-bar"><i class="big" style="width:100%"></i></span><b>£44k</b></div>
+        <div class="f-row"><span class="f-l">Expect to raise</span><span class="f-bar"><i class="small" style="width:41%"></i></span><b>£18k</b></div>
+        <p>About 9% of the £206k start up budget</p>
+      </article>
+    </div>
+    <blockquote class="quote"><p>"A £200k target is really a question of how many applications you can send, and to whom."</p><cite>What the maths told the client</cite></blockquote>
+  </section>
+
+  <section class="block wrap" aria-labelledby="s3">
+    <div class="head">
+      <span class="eyebrow">03 · Execution</span>
+      <h2 id="s3">How I did it, in <span class="hl">three moves</span></h2>
+    </div>
+    <div class="grid3">
+      <article class="move"><span class="n">01</span><h3>Gathered requirements</h3><p>Turned client meetings into a research plan: funders, delivery partners, referral routes and storage for the bikes, each with a deadline.</p></article>
+      <article class="move"><span class="n">02</span><h3>Mapped stakeholders</h3><p>Built a tracker of 150+ organisations in 13 categories, filtered by eligibility and sorted by the client's priorities, with a contact plan for each.</p></article>
+      <article class="move"><span class="n">03</span><h3>Appraised funding options</h3><p>Matched 12 local trusts and foundations, offering grants from £2,000 to £100,000, to the programme's aims: young people, mental health, clean air and marginalised communities.</p></article>
+    </div>
+  </section>
+
+  <section class="block wrap tint" aria-labelledby="s4">
+    <div class="head">
+      <span class="eyebrow">04 · Stakeholder map</span>
+      <h2 id="s4">Who was in <span class="hl">the tracker</span></h2>
+      <p>Every organisation was scored on the same criteria, so the client could see at a glance who to approach first and how.</p>
+    </div>
+    <div class="map">
+      <figure class="cats" role="img" aria-label="Tracker entries by category: community groups 49, education 35, advisers and business support 18, housing 18, business partners 12, public services 10, environmental 7, cycling 7, regulatory bodies 7, private sector 6, national funders 5, media 3, BAME national and regional 1.">
+        <figcaption>Tracker entries by category</figcaption>
+        <div class="cat"><span class="cn">Community groups</span><span class="ct"><i style="width:100.0%"></i></span><b>49</b></div><div class="cat"><span class="cn">Education</span><span class="ct"><i style="width:71.4%"></i></span><b>35</b></div><div class="cat"><span class="cn">Advisers and business support</span><span class="ct"><i style="width:36.7%"></i></span><b>18</b></div><div class="cat"><span class="cn">Housing</span><span class="ct"><i style="width:36.7%"></i></span><b>18</b></div><div class="cat"><span class="cn">Business partners</span><span class="ct"><i style="width:24.5%"></i></span><b>12</b></div><div class="cat"><span class="cn">Public services</span><span class="ct"><i style="width:20.4%"></i></span><b>10</b></div><div class="cat"><span class="cn">Environmental</span><span class="ct"><i style="width:14.3%"></i></span><b>7</b></div><div class="cat"><span class="cn">Cycling</span><span class="ct"><i style="width:14.3%"></i></span><b>7</b></div><div class="cat"><span class="cn">Regulatory bodies</span><span class="ct"><i style="width:14.3%"></i></span><b>7</b></div><div class="cat"><span class="cn">Private sector</span><span class="ct"><i style="width:12.2%"></i></span><b>6</b></div><div class="cat"><span class="cn">National funders</span><span class="ct"><i style="width:10.2%"></i></span><b>5</b></div><div class="cat"><span class="cn">Media</span><span class="ct"><i style="width:6.1%"></i></span><b>3</b></div><div class="cat"><span class="cn">BAME national and regional</span><span class="ct"><i style="width:2.0%"></i></span><b>1</b></div>
+      <p class="fine">The 12 local funders were profiled separately, in a funder report.</p>
+      </figure>
+      <div class="score">
+        <span class="mini">How each stakeholder was scored</span>
+        <div class="crit"><span>Network and reach</span><span>Productivity</span><span>Resources</span><span>Commitment</span><span>Funding</span><span>Impact</span></div>
+        <div class="arrow" aria-hidden="true">↓</div>
+        <div class="out"><b>Engagement score</b><span>shows who matters most right now</span></div>
+        <div class="arrow" aria-hidden="true">↓</div>
+        <div class="out lime"><b>Strategy and owner</b><span>how to approach them, and who in the team does it</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="s5">
+    <div class="head">
+      <span class="eyebrow">05 · Recommendations</span>
+      <h2 id="s5">What we <span class="hl">handed over</span></h2>
+    </div>
+    <div class="grid3">
+      <article class="rec"><span class="n">01</span><h3>A funding mix</h3><p>Grants lead in year one at 50% of income, falling to 10% by year five, when sponsorship and contracts with schools and agencies bring in 80%.</p></article>
+      <article class="rec"><span class="n">02</span><h3>Appeal to CSR goals</h3><p>Pitch corporates on what they already report on: youth, crime reduction and the UK's net zero target.</p></article>
+      <article class="rec"><span class="n">03</span><h3>A website that asks</h3><p>One place to volunteer, donate, sponsor, give through payroll, leave a gift or become a digital ambassador.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap limits-wrap" aria-labelledby="s6">
+    <div class="limits">
+      <div class="lh"><span class="eyebrow">06 · Next steps</span><h2 id="s6">What I'd do next</h2></div>
+      <div class="lim"><b>Track</b><p>Log the outcome of every application, so the client's own success rate replaces the 20% benchmark.</p></div>
+      <div class="lim"><b>Rank</b><p>Rank funders by fit and grant size, and apply to the best matches first.</p></div>
+      <div class="lim"><b>Own</b><p>Give every stakeholder in the tracker a named owner and a review date.</p></div>
+    </div>
+    <div class="skills"><span class="eyebrow">BA skills used</span><div class="chips"><span>Requirements elicitation</span><span>Stakeholder analysis</span><span>Engagement scoring</span><span>Options appraisal</span><span>Pipeline forecasting</span><span>Data collection and validation</span><span>Stakeholder prioritisation</span><span>Benchmarking</span></div></div>
+    <div class="skills"><span class="eyebrow">Tools</span><div class="chips"><span>Excel</span></div></div>
+  </section>
+
+  <section class="wrap next" aria-labelledby="nx">
+    <a class="next-card" href="https://amjad99-jpg.github.io/scaters-project.html">
+      <span class="eyebrow">Next project · Process mapping</span>
+      <span class="nc"><h2 id="nx">45 products. One old warehouse. A plan to speed it up.</h2><span class="go" aria-hidden="true">→</span></span>
+    </a>
+  </section>
+</main>
+
+<section class="contact" id="contact" aria-labelledby="ct">
+  <div class="wrap">
+    <h2 id="ct">Let's <span class="hl">talk.</span></h2>
+    <p>Open to business analyst and operations analyst roles. Email or LinkedIn is the quickest way to reach me.</p>
+    <div class="ctas">
+      <a class="btn primary" style="text-transform:none" href="mailto:alhosniamjaad99@gmail.com">alhosniamjaad99@gmail.com</a>
+      <a class="btn outline" href="https://www.linkedin.com/in/amjad-a-b62b14429" target="_blank" rel="noopener">LinkedIn →</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>MSc consultancy project for Cycle of Life, 2023 to 2024. Contact details and internal figures withheld.</span><span>© 2026 Amjad Rashid Alhousni</span></div></footer>
+
+</body>
+</html>
