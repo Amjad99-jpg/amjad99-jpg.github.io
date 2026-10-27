@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amjad99-jpg.github.io/">
 <meta property="og:title" content="Amjad Alhousni | Business Analysis and Transformation Portfolio">
-<meta property="og:description" content="Five projects in root cause analysis, process mapping, stakeholder analysis and data analysis.">
+<meta property="og:description" content="Eight projects in data and AI, programme delivery, root cause analysis, process mapping, stakeholder analysis and data analysis.">
 <meta property="og:image" content="https://amjad99-jpg.github.io/thumbnail.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -16,259 +16,260 @@
 <title>Amjad Alhousni</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root {
-    color-scheme: light;
-    --bg: #FBFAF7; --panel: #FFFFFF; --ink: #1E1B33; --muted: #5E5A73; --rule: #E6E2EE;
-    --violet: #5B3DF5; --violet-ink: #3F25D6; --violet-soft: #EEEAFF;
-    --lime: #DDF46B; --lime-deep: #C9E84A; --coral: #FF7A59; --coral-soft: #FFE9E2; --mint-soft: #E1F7EE; --peach-soft: #FFF1E3;
-    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-    --body: "DM Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+    --ink: #111111;
+    --grey: #9A9A9A;
+    --soft: #F3F3F1;
+    --bg: #FFFFFF;
+    --serif: "Instrument Serif", "Liberation Serif", "Times New Roman", serif;
+    --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", "DejaVu Sans Mono", ui-monospace, monospace;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
-  a { color: inherit; }
-  img, svg { display: block; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
-  .narrow { max-width: 880px; }
-  h1, h2, h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; margin: 0; line-height: 1; text-transform: uppercase; letter-spacing: -0.005em; text-wrap: balance; overflow-wrap: break-word; }
-  p { margin: 0; }
-  .hl { color: var(--violet); }
-  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-  .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--violet); }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border: 2px solid transparent; transition: transform .15s ease; }
-  .btn:hover { transform: translateY(-1px); }
-  .btn.primary { background: var(--violet); color: #fff; }
-  .btn.lime { background: var(--lime); color: var(--ink); }
-  .btn.outline { border-color: var(--ink); color: var(--ink); background: transparent; }
-  a:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; border-radius: 8px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
 
-  nav { position: sticky; top: 0; z-index: 20; background: rgba(251,250,247,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
-  nav .name { font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 19px; text-decoration: none; letter-spacing: 0.01em; }
-  nav .name b { color: var(--violet); }
-  nav .links { display: flex; gap: 26px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; }
-  nav .links a { text-decoration: none; color: var(--muted); }
-  nav .links a:hover, nav .links a[aria-current] { color: var(--violet); }
-  nav .btn { padding: 9px 18px; font-size: 12.5px; }
-
-  .hero { position: relative; overflow: hidden; background:
-      radial-gradient(520px 360px at 88% 18%, rgba(91,61,245,0.20), transparent 70%),
-      radial-gradient(460px 320px at 8% 92%, rgba(221,244,107,0.55), transparent 70%),
-      radial-gradient(420px 300px at 62% 105%, rgba(255,122,89,0.18), transparent 70%),
-      var(--bg); }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chips span { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 5px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--rule); color: var(--ink); }
-
-  .band { background: var(--lime); }
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-  .stat { background: var(--panel); border-radius: 16px; padding: 20px 20px 18px; display: grid; gap: 6px; align-content: start; box-shadow: 0 1px 0 rgba(30,27,51,0.06); }
-  .stat b { font-family: var(--display); font-stretch: 108%; font-weight: 800; font-size: clamp(30px, 3.6vw, 42px); line-height: 1; }
-  .stat span { font-size: 14px; color: var(--muted); line-height: 1.4; }
-
-  section.block { padding-block: 84px; }
-  .head { display: grid; gap: 14px; margin-bottom: 32px; max-width: 760px; }
-  .head h2 { font-size: clamp(32px, 5vw, 52px); }
-  .head p { font-size: 18px; color: var(--muted); max-width: 62ch; }
-
-  .contact { background: linear-gradient(120deg, var(--violet-soft), var(--mint-soft) 55%, var(--peach-soft)); }
-  .contact .wrap { padding-block: 84px; display: grid; gap: 22px; justify-items: start; }
-  .contact h2 { font-size: clamp(44px, 8vw, 88px); }
-  .contact p { font-size: 18px; color: var(--muted); max-width: 50ch; }
-  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-  footer { background: var(--ink); color: #CFCBE0; font-size: 13px; }
-  footer .wrap { padding-block: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
-
-  @media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) {
-    nav .links { display: none; }
-    section.block { padding-block: 60px; }
-    .stat { padding: 16px; }
+  /* floating pills */
+  .pill {
+    position: fixed; top: 18px; z-index: 50; height: 40px; padding: 0 16px;
+    display: flex; align-items: center; gap: 18px;
+    background: rgba(214, 214, 212, 0.72); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 0; border-radius: 999px; color: var(--ink); cursor: pointer;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em;
   }
-  .home-hero { padding-block: 104px 96px; display: grid; gap: 26px; justify-items: center; text-align: center; }
-  .pill { display: inline-block; padding: 7px 16px; border-radius: 999px; background: var(--panel); border: 1px solid var(--rule); font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--violet); font-weight: 500; }
-  .home-hero h1 { font-size: clamp(42px, 8.4vw, 100px); }
-  .lede { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 58ch; }
-  .ctas.center { justify-content: center; }
-  .hi { padding-block: 64px; display: grid; gap: 22px; }
-  .hi-top { display: grid; grid-template-columns: 1fr 1.35fr; gap: 32px; align-items: start; }
-  .hi h2 { font-size: clamp(32px, 4.6vw, 50px); }
-  .hi-top p { font-size: 17px; }
-  .mini { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); opacity: 0.75; }
-  .center-head { justify-items: center; text-align: center; margin-inline: auto; }
-  .buckets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .bucket { background: var(--panel); border: 1px solid var(--rule); border-radius: 22px; padding: 28px; display: grid; gap: 14px; align-content: start; transition: transform .15s ease, box-shadow .15s ease; }
-  .bucket:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -20px rgba(30,27,51,0.35); }
-  .b-top { display: flex; align-items: center; gap: 12px; }
-  .icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--lime); color: var(--ink); }
-  .bucket:nth-child(2) .icon { background: var(--violet-soft); color: var(--violet); }
-  .bucket:nth-child(3) .icon { background: var(--coral-soft); color: #C2461F; }
-  .bucket:nth-child(4) .icon { background: var(--mint-soft); color: #127A5A; }
-  .bucket.wide { grid-column: 1 / -1; }
-  .bucket:nth-child(5) .icon { background: var(--peach-soft); color: #B4401F; }
-  .b-cat { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-  .bucket h3 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.05; }
-  .bucket p { color: var(--muted); font-size: 15.5px; }
-  .b-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px; border-top: 1px solid var(--rule); }
-  .b-metrics b { display: block; font-family: var(--display); font-stretch: 110%; font-weight: 800; font-size: 28px; line-height: 1; color: var(--violet); }
-  .b-metrics span { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.35; margin-top: 4px; }
-  .b-link { justify-self: start; display: inline-flex; gap: 8px; align-items: center; font-family: var(--display); font-stretch: 105%; font-weight: 800; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: var(--violet); padding: 10px 16px; border-radius: 999px; background: var(--violet-soft); }
-  .b-link:hover { background: var(--violet); color: #fff; }
-  .b-ctx { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
-  .about-wrap { background: var(--panel); border-block: 1px solid var(--rule); }
-  .about { display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; }
-  .about-text { display: grid; gap: 18px; align-content: start; }
-  .about-text h2 { font-size: clamp(32px, 4.6vw, 50px); }
-  .about-text p { font-size: 17px; max-width: 62ch; }
-  .kit { display: grid; gap: 14px; margin-top: 6px; }
-  .kit > div { display: grid; gap: 8px; }
-  .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; align-content: start; border-left: 2px solid var(--rule); }
-  .timeline li { position: relative; padding: 0 0 22px 24px; display: grid; gap: 2px; }
-  .timeline li::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--panel); border: 3px solid var(--violet); }
-  .timeline li:nth-child(2)::before { border-color: var(--lime-deep); }
-  .timeline li:nth-child(3)::before { border-color: var(--coral); }
-  .timeline .when { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); }
-  .timeline b { font-size: 16px; }
-  .timeline span:last-child { font-size: 14px; color: var(--muted); }
-  @media (max-width: 900px) {
-    .hi-top, .about { grid-template-columns: 1fr; gap: 20px; }
-    .buckets { grid-template-columns: 1fr; }
+  .pill:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  #viewToggle { left: 24px; min-width: 150px; justify-content: space-between; }
+  #menuBtn { left: 50%; transform: translateX(-50%); min-width: 250px; justify-content: space-between; }
+  .ico { display: inline-grid; grid-template-columns: repeat(2, 5px); gap: 2px; }
+  .ico i { width: 5px; height: 5px; background: var(--ink); border-radius: 1px; }
+  .burger { display: inline-grid; gap: 3px; }
+  .burger i { width: 14px; height: 1.5px; background: var(--ink); display: block; }
+
+  /* info panel */
+  #info {
+    position: fixed; top: 66px; left: 50%; transform: translateX(-50%); z-index: 49;
+    width: min(560px, calc(100vw - 32px)); background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-radius: 22px; padding: 26px 28px 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.14);
   }
-  @media (max-width: 600px) {
-    .home-hero { padding-block: 64px 60px; }
-    .bucket { padding: 22px 18px; }
-    .b-metrics b { font-size: 24px; }
+  #info[hidden] { display: none; }
+  #info .lead { font-family: var(--serif); font-size: 27px; line-height: 1.08; margin: 0 0 20px; }
+  #info dl { margin: 0; display: grid; grid-template-columns: 110px 1fr; row-gap: 12px; column-gap: 16px; }
+  #info dt { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); padding-top: 3px; }
+  #info dd { margin: 0; font-size: 15px; line-height: 1.45; }
+  #info dd a { border-bottom: 1px solid currentColor; }
+
+  /* landing */
+  .hero { position: relative; height: 100vh; min-height: 560px; overflow: hidden; }
+  .scatter { position: absolute; z-index: 1; animation: drift 9s ease-in-out infinite alternate; }
+  .scatter img { width: 100%; }
+  .s1 { left: 4vw;  top: 12vh;  width: 14vw; animation-delay: -1s; }
+  .s2 { right: 7vw; top: -7vh;  width: 16vw; animation-delay: -3s; }
+  .s3 { left: -3vw; bottom: -9vh; width: 17vw; animation-delay: -5s; }
+  .s4 { left: 41vw; bottom: -16vh; width: 18vw; animation-delay: -2s; }
+  .s5 { right: -4vw; bottom: 9vh; width: 15vw; animation-delay: -4s; }
+  .s6 { left: 27vw; top: -5vh; width: 12vw; animation-delay: -6s; }
+  @keyframes drift { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+  .word { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+  .word h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(120px, 26vw, 440px); line-height: 0.82; letter-spacing: -0.035em; }
+  .word p { margin: calc(clamp(120px, 26vw, 440px) * 0.27) 0 0; font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2vw, 28px); text-align: center; padding: 0 16px; }
+  .scroll { margin-top: 22px; pointer-events: auto; font-family: var(--mono); font-size: 11px; color: var(--ink); }
+
+  /* work */
+  #work { padding: 96px 24px 40px; }
+  .count { font-family: var(--mono); font-size: 11px; color: var(--grey); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 18px; }
+  .grid { columns: 4 240px; column-gap: 12px; }
+  .tile { display: block; position: relative; break-inside: avoid; margin-bottom: 12px; overflow: hidden; }
+  .tile img { width: 100%; transition: transform 0.6s ease; }
+  .tile .cap {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0));
+    color: #fff; opacity: 0; transition: opacity 0.3s ease;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 10px;
+  }
+  .tile .cap b { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.05; }
+  .tile .cap span { font-family: var(--mono); font-size: 11px; white-space: nowrap; }
+  .tile:hover img, .tile:focus-visible img { transform: scale(1.04); }
+  .tile:hover .cap, .tile:focus-visible .cap { opacity: 1; }
+
+  .list { display: none; }
+  #work[data-view="list"] .grid { display: none; }
+  #work[data-view="list"] .list { display: block; }
+  .row, .head { display: grid; grid-template-columns: 1.2fr 1.2fr 1fr 0.6fr; gap: 20px; align-items: baseline; }
+  .head { font-family: var(--mono); font-size: 11px; color: var(--grey); padding: 0 0 14px; }
+  .row { padding: 9px 0; transition: color 0.2s ease; }
+  .row .c { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.1; }
+  .row .p { font-family: var(--serif); font-size: clamp(20px, 2vw, 26px); }
+  .row .s { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2vw, 26px); }
+  .row .y { font-family: var(--mono); font-size: 13px; }
+  .row:hover, .row:focus-visible { color: #C4C4C4; }
+
+  #preview {
+    position: fixed; left: 0; top: 0; z-index: 40; width: 300px; height: 360px;
+    pointer-events: none; opacity: 0; transition: opacity 0.2s ease; overflow: hidden;
+  }
+  #preview.on { opacity: 1; }
+  #preview img { width: 100%; height: 100%; object-fit: cover; animation: breathe 6s ease-in-out infinite alternate; }
+  @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.08); } }
+
+  footer { padding: 70px 24px 26px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 11px; }
+  footer a { margin-left: 18px; }
+
+  @media (max-width: 760px) {
+    #viewToggle { left: 12px; min-width: 0; }
+    #menuBtn { left: auto; right: 12px; transform: none; min-width: 0; }
+    #info { top: 66px; }
+    .s1 { width: 30vw; top: 13vh; }
+    .s2 { width: 32vw; top: -4vh; right: -6vw; }
+    .s3 { width: 34vw; bottom: -6vh; }
+    .s4 { width: 36vw; left: 38vw; bottom: -10vh; }
+    .s5 { width: 30vw; right: -5vw; bottom: 20vh; }
+    .s6 { display: none; }
+    .grid { columns: 2 140px; column-gap: 8px; }
+    .tile { margin-bottom: 8px; }
+    .tile .cap { opacity: 1; padding: 30px 10px 8px; }
+    .tile .cap b { font-size: 17px; }
+    .tile .cap span { display: none; }
+    .head { display: none; }
+    .row { grid-template-columns: 1fr auto; gap: 2px 12px; padding: 12px 0; border-bottom: 1px solid #EEE; }
+    .row .p, .row .s { grid-column: 1; font-size: 17px; }
+    .row .y { grid-column: 2; grid-row: 1; }
+    #preview { display: none; }
+    footer a { margin: 0 18px 0 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scatter, #preview img { animation: none; }
+    html { scroll-behavior: auto; }
   }
 </style>
 </head>
 <body>
-<nav aria-label="Main">
-  <div class="wrap">
-    <a class="name" href="#top">Amjad <b>A.</b></a>
-    <div class="links"><a href="#top" aria-current="page">Home</a><a href="#work">Projects</a><a href="#about">About</a></div>
-    <a class="btn primary" href="#contact">Get in touch</a>
-  </div>
-</nav>
+
+<button class="pill" id="viewToggle" type="button" aria-pressed="false" aria-controls="work">
+  <span>Grid view</span><span class="ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</button>
+
+<button class="pill" id="menuBtn" type="button" aria-expanded="false" aria-controls="info">
+  <span>Amjad Alhousni</span><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<div id="info" hidden>
+  <p class="lead">I lead transformation through data and AI, taking programmes from roadmap and budget to delivery and results.</p>
+  <dl>
+    <dt>Focus</dt><dd>Programme transformation · Data and AI · Business analysis · Business cases</dd>
+    <dt>Track record</dt><dd>2 programmes led end to end<br>150+ stakeholders mapped<br>£200K to £1.5M income plan<br>9 years of live broadcasting</dd>
+    <dt>Skills</dt><dd>Roadmapping · KPI tracking · Data analysis · Change management · Programme delivery · Data transformation · Stakeholder management · Business case development</dd>
+    <dt>Tools</dt><dd>SQL · SPSS · Excel · Power BI · Claude AI · Python (Pandas)</dd>
+    <dt>Next</dt><dd>Transformation, data and AI programmes in financial services and fintech</dd>
+    <dt>Based</dt><dd>Between Oman and the UK</dd>
+    <dt>Contact</dt><dd><a href="mailto:alhosniamjaad99@gmail.com">Email</a> &nbsp; <a href="https://www.linkedin.com/in/amjad-a-b62b14429" target="_blank" rel="noopener">LinkedIn</a></dd>
+  </dl>
+</div>
 
 <header class="hero" id="top">
-  <div class="wrap home-hero">
-    <span class="pill">Business Analysis · Transformation · Data and AI</span>
-    <h1>I find the root cause.<br><span class="hl">Then I fix it.</span></h1>
-    <p class="lede">Business analyst leading transformation through data and AI, from root cause analysis and process mapping to business cases and delivery. I have led 2 programmes end to end, mapped 150+ stakeholders for a non profit, traced an airport bus gap to its root cause and tested what drives buying with SPSS regression.</p>
-    <div class="ctas center">
-      <a class="btn primary" href="#work">View projects ↓</a>
-      <a class="btn lime" href="#contact">Get in touch →</a>
-    </div>
+  <div class="scatter s1"><img src="img/fca-chart.jpg" alt=""></div>
+  <div class="scatter s2"><img src="img/may-cup.jpg" alt=""></div>
+  <div class="scatter s3"><img src="img/on-the-go-map.jpg" alt=""></div>
+  <div class="scatter s4"><img src="img/revel-flow.jpg" alt=""></div>
+  <div class="scatter s5"><img src="img/may-bag.jpg" alt=""></div>
+  <div class="scatter s6"><img src="img/safis-dashboard.jpg" alt=""></div>
+  <div class="word">
+    <h1>Amjad</h1>
+    <p>Programme transformation · Data and AI · Business analysis</p>
+    <a class="scroll" href="#work">Scroll down</a>
   </div>
 </header>
 
-<section class="band" aria-labelledby="hi">
-  <div class="wrap hi">
-    <div class="hi-top">
-      <h2 id="hi">Hi, I'm Amjad <span aria-hidden="true">👋</span></h2>
-      <p>I'm a business analyst who leads transformation through data and AI, taking programmes from roadmap and budget to delivery and results. I analyse the data, find the root cause, map how the process really runs and recommend what to change. As Operations and Data Manager I led a 3 phase rollout of a new time and attendance system, forecast stock from seasonal demand and reconciled supplier records against point of sale, inventory and CRM data, so I know where processes break. My first question is always: why is this happening?</p>
-    </div>
-    <span class="mini">Here's what that looks like:</span>
-    <div class="stats">
-      <div class="stat"><b>14%</b><span>less stock ordered against budget, with zero shortages</span></div>
-      <div class="stat"><b>2</b><span>programmes led end to end, from roadmap to results</span></div>
-      <div class="stat"><b>150+</b><span>stakeholders mapped for a non profit programme</span></div>
-      <div class="stat"><b>100</b><span>consumers surveyed and tested in SPSS</span></div>
-    </div>
+<main id="work" data-view="grid">
+  <p class="count">8 projects · 2022 to 2026</p>
+
+  <div class="grid">
+    <a class="tile" href="fca-complaints-analysis.html"><img src="img/fca-chart.jpg" alt="Banking complaints per 1,000 accounts chart"><span class="cap"><b>FCA Complaints</b><span>Data and AI</span></span></a>
+    <a class="tile" href="may-matcha-launch.html"><img src="img/may-bag.jpg" alt="May Matcha bag and iced matcha"><span class="cap"><b>May Matcha</b><span>Programme delivery</span></span></a>
+    <a class="tile" href="operations-project.html"><img src="img/safis-dashboard.jpg" alt="Stock and supplier dashboard"><span class="cap"><b>Safis Desserts</b><span>Process analysis</span></span></a>
+    <a class="tile" href="revel-rollout.html"><img src="img/revel-flow.jpg" alt="Revel rollout before and after flow"><span class="cap"><b>Revel rollout</b><span>Programme delivery</span></span></a>
+    <a class="tile" href="https://amjad99-jpg.github.io/st-andrews-express/"><img src="img/bus-running-times.jpg" alt="Bus running times chart"><span class="cap"><b>St Andrews Express</b><span>Root cause analysis</span></span></a>
+    <a class="tile" href="zara-social-media-research.html"><img src="img/proof-sells-chart.jpg" alt="Regression results chart"><span class="cap"><b>Proof sells</b><span>Data analysis</span></span></a>
+    <a class="tile" href="on-the-go-project.html"><img src="img/on-the-go-map.jpg" alt="Stakeholder categories chart"><span class="cap"><b>Cycle of Life</b><span>Stakeholder analysis</span></span></a>
+    <a class="tile" href="may-matcha-launch.html"><img src="img/may-cup.jpg" alt="May Matcha iced matcha drink"><span class="cap"><b>May Matcha</b><span>Programme delivery</span></span></a>
+    <a class="tile" href="scaters-project.html"><img src="img/scaters-poster.jpg" alt="Scaters project poster"><span class="cap"><b>Scaters</b><span>Process mapping</span></span></a>
+    <a class="tile" href="fca-complaints-analysis.html"><img src="img/fca-poster.jpg" alt="FCA complaints analysis summary"><span class="cap"><b>FCA Complaints</b><span>Data and AI</span></span></a>
+    <a class="tile" href="https://amjad99-jpg.github.io/st-andrews-express/"><img src="img/bus-timetable.jpg" alt="Two coach timetable"><span class="cap"><b>St Andrews Express</b><span>Root cause analysis</span></span></a>
+    <a class="tile" href="zara-social-media-research.html"><img src="img/proof-sells-poster.jpg" alt="Proof sells project poster"><span class="cap"><b>Proof sells</b><span>Data analysis</span></span></a>
+    <a class="tile" href="may-matcha-launch.html"><img src="img/may-pouch.jpg" alt="May Matcha own brand powder"><span class="cap"><b>May Matcha</b><span>Programme delivery</span></span></a>
+    <a class="tile" href="scaters-project.html"><img src="img/scaters-cycle.jpg" alt="Production cycle chart"><span class="cap"><b>Scaters</b><span>Process mapping</span></span></a>
   </div>
-</section>
 
-<main>
-  <section class="block wrap" id="work" aria-labelledby="work-h">
-    <div class="head center-head">
-      <h2 id="work-h">Things I've worked on <span class="hl">(and the receipts)</span></h2>
-    </div>
-    <div class="buckets">
-
-      <article class="bucket">
-        <div class="b-top"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg></span><span class="b-cat">Process analysis</span></div>
-        <h3>Every delivery checked. Every gap closed.</h3>
-        <p>Planned stock around student term times and summer, and checked every delivery against the invoice, point of sale, inventory and CRM records.</p>
-        <div class="b-metrics"><div><b>14%</b><span>less ordered against budget</span></div><div><b>0</b><span>stock shortages</span></div><div><b>64</b><span>supplier mismatches, all resolved</span></div></div>
-        <a class="b-link" href="https://amjad99-jpg.github.io/operations-project.html">View the project <span aria-hidden="true">→</span></a>
-      </article>
-
-
-      <article class="bucket">
-        <div class="b-top"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></span><span class="b-cat">Root cause analysis</span></div>
-        <h3>Why the airport bus only runs every 2 hours</h3>
-        <p>Tested traffic, driver breaks and resources against the official timetable. The real limit was coaches and drivers, which changed the fix.</p>
-        <div class="b-metrics"><div><b>23</b><span>weekday journeys analysed</span></div><div><b>2</b><span>coaches run the whole timetable</span></div><div><b>1 hr</b><span>between direct airport buses in my plan, down from 2</span></div></div>
-        <a class="b-link" href="https://amjad99-jpg.github.io/st-andrews-express/">View the project <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="bucket">
-        <div class="b-top"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="b-cat">Data analysis</span></div>
-        <h3>Proof sells. Promotion doesn't.</h3>
-        <p>Which Instagram and Facebook content makes millennials buy sustainable fashion. Survey, SPSS regression, and what a brand should do with it.</p>
-        <div class="b-metrics"><div><b>100</b><span>consumers surveyed</span></div><div><b>58%</b><span>judge sustainability by reviews and ratings</span></div><div><b>p = 0.008</b><span>proof moved buying; promotion didn't</span></div></div>
-        <a class="b-link" href="https://amjad99-jpg.github.io/zara-social-media-research.html">View the project <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="bucket">
-        <div class="b-top"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M11 7.3 6.2 15.8M13 7.3l4.8 8.5M7.5 18h9"/></svg></span><span class="b-cat">Stakeholder analysis</span></div>
-        <h3>£200k to raise. 150+ doors to knock on.</h3>
-        <p>Stakeholder and funding research for On the Go, a 12 week programme for young people in Liverpool, for the non profit Cycle of Life.</p>
-        <div class="b-metrics"><div><b>150+</b><span>stakeholders mapped</span></div><div><b>12</b><span>funders profiled</span></div><div><b>£1.5m</b><span>5 year income plan</span></div></div>
-        <a class="b-link" href="https://amjad99-jpg.github.io/on-the-go-project.html">View the project <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="bucket wide">
-        <div class="b-top"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 0 1 2 2v7"/></svg></span><span class="b-cat">Process mapping · ERP simulation</span></div>
-        <h3>45 products. One old warehouse. A plan to speed it up.</h3>
-        <p>As Production Manager for Scaters, a skateboard manufacturer in a business simulation, I mapped the process from supplier to customer feedback, set the production targets and recommended RFID and barcode tracking.</p>
-        <div class="b-metrics"><div><b>8</b><span>step process map</span></div><div><b>80</b><span>units a day production KPI</span></div><div><b>10 days</b><span>production cycle target</span></div></div>
-        <a class="b-link" href="https://amjad99-jpg.github.io/scaters-project.html">View the project <span aria-hidden="true">→</span></a>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="block about-wrap" id="about" aria-labelledby="about-h">
-    <div class="wrap about">
-      <div class="about-text">
-        <span class="eyebrow">About me</span>
-        <h2 id="about-h">From live TV to <span class="hl">business analysis</span></h2>
-        <p>I began presenting children's and youth programmes on television and radio in Oman at a young age and progressed to national affairs, interviewing senior public figures, education leaders and government ministers live. It taught me what business analysis and transformation rely on: asking precise questions, listening to stakeholders and checking every fact before it goes out.</p>
-        <p>In the UK I completed an MSc in International Business and Management and built my business analysis experience. As Operations and Data Manager I led a 3 phase rollout of the Revel time and attendance system and reconciled supplier records against point of sale, inventory and CRM data. For a non profit I mapped 150+ stakeholders and recommended a 5 year income plan growing to £1.5 million. In Muscat I launched May Matcha as a 3 phase programme over 9 months, growing weekly orders by over 60%. I also tested consumer data with SPSS regression and traced a bus timetable gap to its root cause. Every project starts the same way: ask the right question, find the cause in the data, then recommend the fix.</p>
-        <div class="kit">
-          <div><span class="mini">Transformation</span><div class="chips"><span>Programme delivery</span><span>Roadmapping</span><span>Business case development</span><span>Change management</span><span>Process improvement</span></div></div>
-          <div><span class="mini">Business analysis</span><div class="chips"><span>Requirements elicitation</span><span>As is and to be process mapping</span><span>Root cause analysis</span><span>Gap analysis</span><span>Stakeholder analysis</span><span>Options appraisal</span></div></div>
-          <div><span class="mini">Data</span><div class="chips"><span>Data analysis</span><span>Data reconciliation</span><span>Demand forecasting</span><span>KPI reporting</span><span>Regression and hypothesis testing</span></div></div>
-          <div><span class="mini">Tools</span><div class="chips"><span>SQL</span><span>SPSS</span><span>Excel</span><span>Power BI</span><span>Claude AI</span><span>HubSpot CRM</span><span>Python (Pandas)</span></div></div>
-          <div><span class="mini">Languages</span><div class="chips"><span>Arabic</span><span>English</span></div></div>
-        </div>
-      </div>
-      <ol class="timeline" aria-label="Experience">
-        <li><span class="when">2025 to 2026</span><b>Founder and Go to Market Data Lead, May Matcha</b><span>Premium matcha brand, sourced from Japan</span></li>
-        <li><span class="when">2022 to 2025</span><b>Operations and Data Manager, Safis Desserts</b><span>Liverpool, UK</span></li>
-        <li><span class="when">2023 to 2024</span><b>Research Consultant, Cycle of Life</b><span>Non profit, Liverpool, UK</span></li>
-        <li><span class="when">2024</span><b>MSc International Business and Management</b><span>Liverpool John Moores University</span></li>
-        <li><span class="when">2011 to 2020</span><b>Television and Radio Host</b><span>Ministry of Information, Oman</span></li>
-      </ol>
-    </div>
-  </section>
+  <div class="list" role="list">
+    <div class="head" aria-hidden="true"><span>Client</span><span>Project</span><span>Service</span><span>Year</span></div>
+    <a class="row" role="listitem" href="fca-complaints-analysis.html" data-img="img/fca-chart.jpg"><span class="c">FCA data (independent)</span><span class="p">Complaints analysis</span><span class="s">Data and AI</span><span class="y">2026</span></a>
+    <a class="row" role="listitem" href="https://amjad99-jpg.github.io/st-andrews-express/" data-img="img/bus-running-times.jpg"><span class="c">Independent</span><span class="p">St Andrews Express</span><span class="s">Root cause analysis</span><span class="y">2026</span></a>
+    <a class="row" role="listitem" href="may-matcha-launch.html" data-img="img/may-bag.jpg"><span class="c">May Matcha</span><span class="p">Launch programme</span><span class="s">Programme delivery</span><span class="y">2025 to 2026</span></a>
+    <a class="row" role="listitem" href="revel-rollout.html" data-img="img/revel-flow.jpg"><span class="c">Safis Desserts</span><span class="p">Revel rollout</span><span class="s">Programme delivery</span><span class="y">2022 to 2025</span></a>
+    <a class="row" role="listitem" href="operations-project.html" data-img="img/safis-dashboard.jpg"><span class="c">Safis Desserts</span><span class="p">Every delivery checked</span><span class="s">Process analysis</span><span class="y">2022 to 2025</span></a>
+    <a class="row" role="listitem" href="zara-social-media-research.html" data-img="img/proof-sells-chart.jpg"><span class="c">LJMU (MSc dissertation)</span><span class="p">Proof sells</span><span class="s">Data analysis</span><span class="y">2024</span></a>
+    <a class="row" role="listitem" href="on-the-go-project.html" data-img="img/on-the-go-map.jpg"><span class="c">Cycle of Life</span><span class="p">On the Go</span><span class="s">Stakeholder analysis</span><span class="y">2023 to 2024</span></a>
+    <a class="row" role="listitem" href="scaters-project.html" data-img="img/scaters-poster.jpg"><span class="c">Scaters (simulation)</span><span class="p">Production process</span><span class="s">Process mapping</span><span class="y">2023</span></a>
+  </div>
 </main>
 
-<section class="contact" id="contact" aria-labelledby="ct">
-  <div class="wrap">
-    <h2 id="ct">Let's <span class="hl">talk.</span></h2>
-    <p>Open to business analyst, transformation, process improvement and data analyst roles. Email or LinkedIn is the quickest way to reach me.</p>
-    <div class="ctas">
-      <a class="btn primary" style="text-transform:none" href="mailto:alhosniamjaad99@gmail.com">alhosniamjaad99@gmail.com</a>
-      <a class="btn outline" href="https://www.linkedin.com/in/amjad-a-b62b14429" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-</section>
-<footer><div class="wrap"><span>© 2026 Amjad Rashid Alhousni</span><span>Figures come from my own work and the sources linked in each project.</span></div></footer>
+<div id="preview" aria-hidden="true"><img src="img/bus-running-times.jpg" alt=""></div>
 
+<footer>
+  <span>© 2026 Amjad Alhousni</span>
+  <span><a href="mailto:alhosniamjaad99@gmail.com">Email</a><a href="https://www.linkedin.com/in/amjad-a-b62b14429" target="_blank" rel="noopener">LinkedIn</a></span>
+</footer>
+
+<script>
+  (function () {
+    var work = document.getElementById('work');
+    var toggle = document.getElementById('viewToggle');
+    var label = toggle.querySelector('span');
+    var menuBtn = document.getElementById('menuBtn');
+    var info = document.getElementById('info');
+    var preview = document.getElementById('preview');
+    var pimg = preview.querySelector('img');
+
+    function setView(v) {
+      work.dataset.view = v;
+      label.textContent = v === 'grid' ? 'Grid view' : 'List view';
+      toggle.setAttribute('aria-pressed', v === 'list' ? 'true' : 'false');
+      try { localStorage.setItem('amjad-view', v); } catch (e) {}
+    }
+    try { var saved = localStorage.getItem('amjad-view'); if (saved === 'list' || saved === 'grid') setView(saved); } catch (e) {}
+
+    toggle.addEventListener('click', function () {
+      setView(work.dataset.view === 'grid' ? 'list' : 'grid');
+      if (window.scrollY < work.offsetTop - 120) work.scrollIntoView();
+    });
+
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = info.hidden;
+      info.hidden = !open;
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!info.hidden && !info.contains(e.target)) { info.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { info.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+
+    document.querySelectorAll('.row').forEach(function (row) {
+      row.addEventListener('mouseenter', function () { pimg.src = row.dataset.img; preview.classList.add('on'); });
+      row.addEventListener('mouseleave', function () { preview.classList.remove('on'); });
+    });
+    window.addEventListener('mousemove', function (e) {
+      var x = Math.min(e.clientX + 28, window.innerWidth - 316);
+      var y = Math.max(16, Math.min(e.clientY - 180, window.innerHeight - 376));
+      preview.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    });
+  })();
+</script>
 </body>
 </html>
