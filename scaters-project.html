@@ -112,6 +112,40 @@
     footer a { margin:0 18px 0 0; }
   }
   @media (prefers-reduced-motion:reduce) { .hero img { animation:none; } html { scroll-behavior:auto; } }
+  .skills { display:flex; flex-wrap:wrap; gap:10px; }
+  .skills span { padding:12px 18px; border-radius:999px; background:var(--soft); font-family:var(--mono); font-size:13px; }
+
+
+  /* pastel theme */
+  :root { --tint:#FFE7A8; --deep:#1F1D3D; --pop:#4F46E5; --lime:#D4F25C; }
+  .kicker { color:var(--pop); font-weight:500; }
+  h1 .acc { color:var(--pop); font-style:italic; }
+  h2::after { content:""; display:block; width:64px; height:6px; border-radius:3px; background:var(--lime); margin-top:14px; }
+  .stats { background:var(--tint); border-top:0; border-radius:16px; padding:6px 24px 4px; }
+  .stat { border-bottom:0; }
+  .stat b { color:var(--deep); }
+  .phase, .card, .split > div { background:var(--tint); border-radius:16px; }
+  .phase small, .card small { color:var(--pop); font-weight:500; }
+  .card.hot { background:var(--deep); }
+  .lines li em { align-self:start; justify-self:start; color:var(--deep); background:var(--lime); border-radius:999px; padding:5px 10px 4px; white-space:nowrap; }
+  .lines li { grid-template-columns:86px 1fr; }
+  .chips span { background:var(--tint); }
+  .skills span { background:var(--tint); color:var(--deep); }
+  .btn { background:var(--deep); }
+  .next b { color:var(--pop); }
+  .data span { color:var(--pop); }
+  .full, .duo figure, .trio figure { border-radius:16px; overflow:hidden; }
+  .steps2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+  .step2 { background:var(--tint); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; position:relative; }
+  .step2 svg { display:block; width:100%; height:auto; }
+  .step2 .body { padding:18px 20px 22px; display:flex; flex-direction:column; flex:1; }
+  .step2 small { font-family:var(--mono); font-size:11px; color:var(--pop); text-transform:uppercase; letter-spacing:.06em; font-weight:500; }
+  .step2 h3 { margin:8px 0 8px; font-family:var(--serif); font-weight:400; font-size:28px; line-height:1.05; }
+  .step2 p { margin:0; font-size:15.5px; line-height:1.45; color:#333; }
+  .step2 .why { margin-top:auto; padding-top:14px; }
+  .step2 .why span { display:block; background:#fff; border-radius:12px; padding:10px 12px; font-size:14.5px; line-height:1.4; color:#222; }
+  .step2 .why b { color:var(--pop); font-weight:600; }
+  @media (max-width:820px) { .lines li { grid-template-columns:70px 1fr; } }
 </style>
 </head>
 <body>
@@ -120,9 +154,9 @@
 
 <header class="top">
   <div class="intro">
-    <h1>Scaters · Process mapping</h1>
-    <div class="data"><div><span>Project</span>Production process</div><div><span>Service</span>Process mapping</div><div><span>Year</span>2023</div><div><span>Role</span>Production Manager</div><div><span>Company</span>Scaters (simulation)</div><div><span>Team</span>5 members</div></div>
-    <p class="lede">As Production Manager for Scaters, a Liverpool skateboard maker up against bigger brands, I mapped the process from supplier to customer, set the production targets and recommended how to track stock.</p>
+    <h1>Scaters · <span class="acc">Root cause analysis</span></h1>
+    <div class="data"><div><span>Project</span>Production process</div><div><span>Service</span>Root cause analysis</div><div><span>Year</span>2023</div><div><span>Role</span>Production Manager</div><div><span>Company</span>Scaters (simulation)</div><div><span>Team</span>5 members</div></div>
+    <p class="lede">82 late orders, a warehouse from 1990 and rivals delivering in 2 weeks. A fishbone analysis found the real cause: 62% of the delays came down to staff shortages.</p>
   </div>
   <div class="hero" style="background:#E8E3DA"><img src="scaters-poster.jpg" alt=""></div>
 </header>
@@ -141,6 +175,16 @@
 
 <section>
   <p class="kicker">02</p>
+  <h2>Why orders were late</h2>
+  <div class="stats">
+    <div class="stat"><b>82</b><span>order delays analysed</span></div>
+    <div class="stat"><b>62%</b><span>traced to staff shortages, using a fishbone analysis</span></div>
+    <div class="stat"><b>£30K</b><span>estimated saving from insourcing, which I recommended</span></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">03</p>
   <h2>Supplier to customer in 8 steps</h2>
   <ol class="lines">
     <li><em>01</em><span>Buy raw materials from suppliers</span></li>
@@ -155,7 +199,7 @@
 </section>
 
 <section>
-  <p class="kicker">03</p>
+  <p class="kicker">04</p>
   <h2>Targets inside 2 weeks</h2>
   <div class="full"><img src="scaters-cycle-full.jpg" alt="Production 10 days, dispatch 1 day, invoice 1 day"></div>
   <div class="stats" style="margin-top:28px">
@@ -166,7 +210,7 @@
 </section>
 
 <section>
-  <p class="kicker">04</p>
+  <p class="kicker">05</p>
   <h2>What I recommended</h2>
   <ol class="lines">
     <li><em>01</em><span><strong>Track every material</strong> with RFID and barcodes, so parts are found in seconds, not hours.</span></li>
@@ -174,12 +218,17 @@
     <li><em>03</em><span><strong>Train for the change:</strong> staff trained on the new layout and system.</span></li>
   </ol>
   <p class="note">Business simulation on an ERP system, Liverpool John Moores University, March 2023.</p>
-  <div class="tags"><span>Business process mapping</span><span>As is and to be analysis</span><span>Gap analysis</span><span>KPI definition</span><span>Cycle time analysis</span><span>ERP system</span></div>
+</section>
+
+<section>
+  <p class="kicker">Skills used</p>
+  <h2>Key skills</h2>
+  <div class="skills"><span>Root cause analysis (fishbone)</span><span>Business process mapping</span><span>As is and to be analysis</span><span>Gap analysis</span><span>KPI definition</span><span>Cycle time analysis</span></div>
 </section>
 
 </main>
 
-<div class="next"><a href="fca-complaints-analysis.html"><span><small>Next project</small><b>FCA Complaints · Data and AI</b></span><img src="fca-chart.jpg" alt=""></a></div>
+<div class="next"><a href="revel-rollout.html"><span><small>Next project</small><b>Safis Desserts · Revel rollout</b></span><img src="revel-flow.jpg" alt=""></a></div>
 
 <footer>
   <span>© 2026 Amjad Alhousni</span>
